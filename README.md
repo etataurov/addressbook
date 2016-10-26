@@ -77,6 +77,7 @@ group.add_member(person)
 ## Questions
 #### Q: Find person by email address (can supply any substring, ie. "comp" should work assuming "alexander@company.com" is an email address in the address book) - discuss how you would implement this without coding the solution.
 A: I can propose 3 solutions:
+
 1. Construct regex like `.*comp.*` and loop trough the list of all email. Return matching
 2. Create suffix tree instead of prefix tree (`addressbook.memory_storage.index`), which allows to search by any substring
 3. Pass database-based storage to AddressBook constructor and use databases `LIKE` or similar
