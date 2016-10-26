@@ -6,7 +6,7 @@ python3 setup.py install
 ## Run tests
 ### Install test requirements
 ```
-pip install -r requirements.txt
+pip install -r requirements-test.txt
 ```
 ### Run
 ```
