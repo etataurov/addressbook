@@ -76,6 +76,7 @@ class Person:
         return [a.value for a in self._attributes[attr_type]]
 
     def _add_attribute(self, attr_type, attr_value):
+        assert isinstance(attr_value, str), "{} attribute must be a string".format(attr_type.value)
         attr = PersonAttribute(self, attr_value)
         self.store.register_attribute(attr_type, attr)
         self._attributes[attr_type].append(attr)

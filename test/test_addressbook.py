@@ -29,6 +29,14 @@ class TestAddressBookBasic(TestCase):
         assert person.phones == phones
         assert person.addresses == addresses
 
+    def test_person_wrong_attribute_types(self):
+        phones = [12345]
+        with pytest.raises(AssertionError):
+            self.book.create_person(
+                first_name="Test", last_name="Man",
+                phones=phones
+            )
+
     def test_add_group(self):
         group = self.book.create_group(name="Friends")
         assert len(self.book.groups) == 1
